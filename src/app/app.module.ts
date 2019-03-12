@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// routing and navigation
+import { appRoutes } from './routes';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
    declarations: [
@@ -15,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
    imports: [
       BrowserModule,
       AppRoutingModule,
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      RouterModule.forRoot(appRoutes, {enableTracing: false})
    ],
    providers: [],
    bootstrap: [
