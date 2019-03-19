@@ -20,6 +20,31 @@
     <link rel="icon" type="image/x-icon" href="./assets/logo.png" />
   </head>
   <body>
-    <app-root></app-root>
+    <app-root>
+      <!-- loading layout replaced by app after startupp -->
+      <div class="app-loading-container" id="app-loading-container">
+        <div class="app-loading" id="app-loading"></div>
+      </div>
+    </app-root>
+
+    <script type="text/javascript">
+      var mouse = {
+        positionX: undefined,
+        positionY: undefined
+      };
+
+      
+      var appLoadingContainer = appLoadingContainer = document.getElementById('app-loading-container');
+      var appLoading = appLoading = document.getElementById('app-loading');
+
+      // mouse event listener
+      appLoadingContainer.addEventListener('mousemove', function(event) {
+        mouse.positionX = event.x - appLoadingContainer.clientWidth / 2 - appLoading.clientWidth / 2;
+        mouse.positionY = event.y - appLoadingContainer.clientHeight / 2 - appLoading.clientHeight / 2;
+
+        appLoading.style.left = mouse.positionX + 'px';
+        appLoading.style.top = mouse.positionY + 'px';
+      });
+    </script>
   </body>
 </html>

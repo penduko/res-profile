@@ -1,6 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    margin: 0;
-    background: #000;
+  margin: 0;
+  // background: #000;
+
+  .app-loading-container {
+    width: 50vw;
+    height: 50vh;
+    overflow: hidden;
+    transform: translate(50%, 50%);
+
+    // loader
+    .app-loading {
+      width: 100px;
+      height: 100px;
+      background: #0cb9e2;
+      position: relative;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .app-loading:before {
+      content: '';
+      width: 80px;
+      height: 80px;
+      background: darken(#0cb9e2, 5%);
+      position: absolute;
+      transform: translate(10px, 10px);
+      border-radius: 50%;
+    }
+
+    .app-loading::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      background: darken(#0cb9e2, 20%);
+      position: absolute;
+      transform: translate(30px, 30px);
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
 }
