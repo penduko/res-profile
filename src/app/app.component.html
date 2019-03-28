@@ -1,37 +1,26 @@
 <div class="body-container">
   <header>
-    <div class="logo">
-      
-    </div>
+    <div class="logo"></div>
     <nav class="menu-header">
-        <a href="#" class="active">Me</a>
-        <a href="#">Resume</a>
-        <a href="#">Contact</a>
-        <a href="#">Resources</a>
-        <a href="#">Blogs</a>
+      <button (click)="sideBar(true)"><i class="fas fa-bars"></i></button>
+      <a href="#">Me</a>
+      <a href="#">Resume</a>
+      <a href="#">Contact</a>
+      <a href="#">Resources</a>
+      <a href="#">Blogs</a>
     </nav>
   </header>
-  <!-- <aside style="background:red; width: 0; visibility: hidden;">
+  <div class="filler"></div>
+  <aside [ngClass]="{'show-aside': displaySideBar}" >
     <nav class="menu-side">
-      <ul>
-        <li>
-          <a href="#">Me</a>
-        </li>
-        <li>
-          <a href="#">Resume</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-        <li>
-          <a href="#">Resources</a>
-        </li>
-        <li>
-          <a href="#">Blogs</a>
-        </li>
-      </ul>
+      <button (click)="sideBar(false)"><i class="fas fa-times"></i></button>
+      <a href="#">Me</a>
+      <a href="#">Resume</a>
+      <a href="#">Contact</a>
+      <a href="#">Resources</a>
+      <a href="#">Blogs</a>
     </nav>
-  </aside> -->
+  </aside>
   <main>
     <!-- <app-main-content></app-main-content> -->
     <router-outlet></router-outlet>
@@ -43,57 +32,5 @@
       <a href="#"><i class="fab fa-linkedin-in"></i> Linkedin</a>
       <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
     </nav>
-    
   </footer>
 </div>
-
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
-  <h1>Welcome to {{ title }}!</h1>
-  <img
-    width="300"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-</div>
-<h2>Here are some links to help you start:</h2>
-<ul>
-  <li>
-    <h2>
-      <a target="_blank" rel="noopener" href="https://angular.io/tutorial"
-        >Tour of Heroes</a
-      >
-    </h2>
-  </li>
-  <li>
-    <h2>
-      <a target="_blank" rel="noopener" href="https://angular.io/cli"
-        >CLI Documentation</a
-      >
-    </h2>
-  </li>
-  <li>
-    <h2>
-      <a target="_blank" rel="noopener" href="https://blog.angular.io/"
-        >Angular blog</a
-      >
-    </h2>
-  </li>
-</ul> -->
-
-<!-- animation -->
-<!-- <svg class="loader" viewBox="0 0 340 340">
-  <circle cx="170" cy="170" r="160" stroke="#E2007C" />
-  <circle cx="170" cy="170" r="135" stroke="#404041" />
-  <circle cx="170" cy="170" r="110" stroke="#E2007C" />
-  <circle cx="170" cy="170" r="85" stroke="#404041" />
-</svg>
-
-<svg class="loader" viewBox="0 0 340 340">
-  <circle cx="170" cy="170" r="160" stroke="#5A0000" />
-  <circle cx="170" cy="170" r="135" stroke="#404041" />
-  <circle cx="170" cy="170" r="110" stroke="#5A0000" />
-  <circle cx="170" cy="170" r="85" stroke="#404041" />
-</svg> -->
-
-

@@ -1,72 +1,4 @@
-.myHeader {
-  /* position: absolute; */
-  width: 580px;
-  /* height: 90px; */
-  /* left: 425px;
-  top: 518px; */
 
-  font-family: 'Carter One';
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 96px;
-  /* font-size: 5vw; */
-  text-align: center;
-  letter-spacing: 0.1em;
-
-  text-shadow: 7px 9px 0px #8c78771c;
-  transform: rotate(-10deg);
-
-  background: linear-gradient(60deg, #f1ebeb 0%, #792424 75%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: gradientAnimation 10s infinite linear;
-}
-
-@-webkit-keyframes gradientAnimation {
-  to {
-    -webkit-filter: hue-rotate(-420deg);
-  }
-}
-
-// svg:hover {
-//   /* -webkit-filter: drop-shadow(5px 15px 15px rgb(190, 11, 11)); */
-//   animation: shadowColor 10s infinite;
-// }
-
-@-webkit-keyframes shadowColor {
-  0% {
-    -webkit-filter: drop-shadow(5px 15px 15px rgb(190, 11, 11));
-  }
-  20% {
-    -webkit-filter: drop-shadow(5px 15px 15px rgb(187, 190, 11));
-  }
-  60% {
-    -webkit-filter: drop-shadow(5px 15px 15px rgb(11, 190, 86));
-  }
-  80% {
-    -webkit-filter: drop-shadow(5px 15px 15px rgb(11, 53, 190));
-  }
-  100% {
-    -webkit-filter: drop-shadow(5px 15px 15px rgb(160, 11, 190));
-  }
-}
-
-@-webkit-keyframes animate {
-  0% {
-    fill: none;
-  }
-
-  50% {
-    fill: #0cb9e2;
-    stroke-dashoffset: 0px;
-    stroke: none;
-  }
-  100%{
-    stroke-dashoffset: 850px;
-  }
-}
 
 .main {
   height: 100%;
@@ -76,8 +8,8 @@
   flex-flow: column;
 
   svg {
-    width: 30%;
-    // height: 200px;
+    width: 35%;
+    // width: 576px;
   }
 
   path {
@@ -91,12 +23,12 @@
   }
 
   .sub-heading {
-    overflow: hidden;
-    font-size: 1.2vw;
     font-family: Megrim;
+    font-size: 1.6vw;
+    overflow: hidden;    
 
     &-container {
-      overflow: hidden;
+      overflow: hidden;      
       height: 40px;
       position: relative;
 
@@ -154,6 +86,23 @@
   }
 }
 
+
+// animations
+@-webkit-keyframes animate {
+  0% {
+    fill: none;
+  }
+
+  50% {
+    fill: #0cb9e2;
+    stroke-dashoffset: 0px;
+    stroke: none;
+  }
+  100%{
+    stroke-dashoffset: 850px;
+  }
+}
+
 @-webkit-keyframes change {
   0%,
   12.66%,
@@ -189,5 +138,41 @@
   }
   50% {
     opacity: 1;
+  }
+}
+
+
+
+// responsive
+// small screen less than 768px
+@media only screen and (max-width: 768px) {
+  .main {
+    svg {
+      width: 50%;
+    }
+  }
+
+  .sub-heading {
+    
+
+    &-container { 
+      font-size: 2.5vw;
+    }
+  }
+}
+
+// small screen less than 368px
+@media only screen and (max-width: 368px) {
+  .main {
+    svg {
+      width: 65%;
+    }
+  }
+
+  .sub-heading {
+    
+    &-container { 
+      font-size: 4vw;
+    }
   }
 }
