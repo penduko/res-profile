@@ -1,6 +1,9 @@
-# Sample2
+# Responsive Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+
+## Link
+https://github.com/penduko/res-profile
 
 ## Development server
 
