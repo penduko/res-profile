@@ -17,8 +17,33 @@
     <base href="https://penduko.github.io/res-profile/">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="./assets/logo.png" />
-  <link rel="stylesheet" href="styles.8a7fa22f0becdb80e333.css"></head>
+  <link rel="stylesheet" href="styles.0443b6f1b06d19ecc577.css"></head>
   <body>
-    <app-root></app-root>
-  <script type="text/javascript" src="runtime.a5dd35324ddfd942bef1.js"></script><script type="text/javascript" src="es2015-polyfills.12eccedba99646c7daca.js" nomodule></script><script type="text/javascript" src="polyfills.407a467dedb63cfdd103.js"></script><script type="text/javascript" src="main.9020b72a3c838a9462eb.js"></script></body>
+    <app-root>
+      <!-- loading layout replaced by app after startupp -->
+      <div class="app-loading-container" id="app-loading-container">
+        <div class="app-loading" id="app-loading"></div>
+      </div>
+    </app-root>
+
+    <script type="text/javascript">
+      var mouse = {
+        positionX: undefined,
+        positionY: undefined
+      };
+
+      
+      var appLoadingContainer = appLoadingContainer = document.getElementById('app-loading-container');
+      var appLoading = appLoading = document.getElementById('app-loading');
+
+      // mouse event listener
+      appLoadingContainer.addEventListener('mousemove', function(event) {
+        mouse.positionX = event.x - appLoadingContainer.clientWidth / 2 - appLoading.clientWidth / 2;
+        mouse.positionY = event.y - appLoadingContainer.clientHeight / 2 - appLoading.clientHeight / 2;
+
+        appLoading.style.left = mouse.positionX + 'px';
+        appLoading.style.top = mouse.positionY + 'px';
+      });
+    </script>
+  <script type="text/javascript" src="runtime.a5dd35324ddfd942bef1.js"></script><script type="text/javascript" src="es2015-polyfills.12eccedba99646c7daca.js" nomodule></script><script type="text/javascript" src="polyfills.407a467dedb63cfdd103.js"></script><script type="text/javascript" src="main.a7aea368a7f1083158ae.js"></script></body>
 </html>
